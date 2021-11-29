@@ -3,8 +3,10 @@ package rule;
 import model.Action;
 import model.Product;
 
+import java.util.List;
+
 public interface IBusinessRule {
 
-    public Action execute(Product product);
+    public List<Action> execute(Product product);
 
 }

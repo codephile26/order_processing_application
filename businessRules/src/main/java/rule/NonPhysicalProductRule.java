@@ -1,4 +1,13 @@
 package rule;
 
-public class NonPhysicalProductRule {
+import model.Action;
+import model.Product;
+
+import java.util.List;
+
+public class NonPhysicalProductRule implements IBusinessRule{
+    @Override
+    public List<Action> execute(Product product) {
+        return null;
+    }
 }

@@ -4,12 +4,16 @@ import model.Action;
 import model.Product;
 import model.ProductType;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class UpgradeMembershipRule implements IBusinessRule{
     @Override
-    public Action execute(Product product) {
+    public List<Action> execute(Product product) {
+        List<Action> actions = new ArrayList<>();
         if (product.getProductType().equals(ProductType.MEMBERSHIP_UPGRADE)){
-            return Action.APPLY_UPGRADE_TO_MEMBERSHIP;
+            actions.add(Action.APPLY_UPGRADE_TO_MEMBERSHIP);
         }
-        return null;
+        return actions;
     }
 }
